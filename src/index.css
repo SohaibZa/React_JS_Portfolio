@@ -1,0 +1,291 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x:hidden ;
+  height: auto;
+  background-image: linear-gradient(63deg, rgba(5, 4, 42, 0.88) 50.74%, rgba(3, 17, 64, 0.80) 79.43%, rgba(30, 180, 163, 0.74) 100%);
+  background-repeat: no-repeat;
+}
+
+/* Navbar Styling */
+#Navbar {
+  z-index: 30;
+  font-family: 'Poppins';
+  animation: NavbarAnimate 1s ease;
+  transition: all 0.5s ease;
+}
+.sleekLine {
+  background: linear-gradient(90deg, #02020D 33.17%, #DC18EE 100%);
+}
+.NavBtn {
+  cursor: pointer;
+}
+.NavBtn:hover {
+  background: linear-gradient(90deg, #02020D 98.17%, #DC18EE 100%);
+}
+#fb:hover{
+  scale: 1.1;
+  transition: all 0.1s ease;
+}
+#in:hover{scale: 1.1;
+  transition: all 0.1s ease;
+}
+#li:hover{scale: 1.1;
+  transition: all 0.1s ease;
+}
+/* Hero Section Styling */
+#HeroTextDiv h1 {
+  font-family: 'Poppins';
+  line-height: 99%;
+}
+
+#zaman {
+  -webkit-text-stroke: 3px #DC18EE;
+}
+
+#HeroTextDiv {
+  transition: 0.5s all ease;
+  animation: TxtScrollAnimate linear;
+  animation-timeline: scroll();
+}
+
+#HeroImgDiv {
+  border:solid rgb(255, 255, 255);
+  border-width: 0 0px 0.1px 0px;
+  width: auto;
+  padding: 0 20px;
+   border-radius:20% 20% 2% 2%;
+  transition: 0.5s all ease;
+  animation: ImgBorderAnimate 5s ease alternate  infinite;
+}
+#HeroImgDiv img{
+  -webkit-filter: drop-shadow(rgb(191, 197, 212) 3px 3px 4px);
+  animation: ImgScrollAnimate linear;
+  animation-timeline: scroll();
+}
+/* Styling the Stack & Exp Section */
+
+.text-code{
+  font-family: 'Source Code Pro';
+}
+.bg-myGradient{
+   background: linear-gradient(130deg,#5f2164 20.23%, #281753 70.43%);
+}
+
+.StackTxt{
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+/*Styling the Projects Section*/
+#work_line {
+   animation: appear3  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.Project_Card{
+  animation: appear2  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.Project_Card:hover{
+  transform: rotateZ(2deg);
+  scale: 1.06;
+  transition: all 0.3s ease;
+}
+/*Styling Contact Section*/
+.bg-myGradient2{
+   background: linear-gradient(63deg, rgba(5, 4, 42, 0.88) 50.74%, rgba(3, 17, 64, 0.80) 79.43%, rgba(30, 180, 163, 0.74) 100%);
+}
+.bg-myGradient3{
+   background: linear-gradient(120deg, rgba(0, 0, 0, 0.88) 49%, rgba(26, 53, 142, 0.8) 50%, rgba(0, 0, 0, 0.74) 51%);
+  }
+  .bg-myGradient4{
+    background: linear-gradient(60deg, rgba(0, 0, 0, 0.88) 49%, rgba(26, 53, 142, 0.8) 50%, rgba(0, 0, 0, 0.74) 51%);
+  }
+  .font-pop{
+    font-family: 'Poppins';
+  }
+  .font-inter{
+    font-family: 'Inter';
+  }
+  #Contact_Form{
+      transition: all 2s ease;
+
+    }
+  #Contact_Form:hover {
+  background: linear-gradient(60deg, rgba(0, 0, 0, 0.88) 49%, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0.74) 51%);
+
+}
+/* Making Custom Animations */
+@keyframes ImgScrollAnimate {
+  from{
+     
+     filter: grayscale(0);
+  }
+  to {
+     
+     filter: grayscale(1);
+  }
+}
+@keyframes TxtScrollAnimate {
+  to {
+    scale: 0.6;
+  }
+}
+@keyframes ImgBorderAnimate {
+  0%{
+    box-shadow: inset 0px 2px 10px #b34bbc;;
+  }
+  50%{
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset 2px 0px 10px rgb(57, 43, 126);
+  }
+}
+@keyframes NavbarAnimate {
+  from{
+      opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+    from {
+        opacity: 0.1;
+        scale: 0.9;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes appear3 {
+    from {
+        transform: translateX(-100px)
+    }
+    to{
+      transform: translateX(0px)
+    }
+}
+@keyframes appear2 {
+    from {
+        filter: grayscale(1);
+        scale: 0.8;
+    }
+    to{
+      filter: grayscale(0);
+        scale: 1;
+    }
+}
+.animated-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  color: white;
+  background: black;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 0;
+}
+
+.animated-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff0066, #ffcc00); /* colorful */
+  z-index: -1;
+  transition: left 0.4s ease;
+}
+
+.animated-btn:hover::before {
+  left: 0;
+}
+
+.animated-btn:hover {
+  color: black;
+}
+
+
+/* Making it responsive */
+@media (max-width:1024px) {
+  #Navbar {
+    width: 15rem;
+    z-index: 40;
+  }
+
+  #Navbar h1 {
+    font-size: 20px;
+  }
+
+  #Navbar ul {
+    font-size: 16px;
+  }
+
+  #Hero {
+    height: auto;
+  }
+
+  #HeroTextDiv {
+    font-size: 26px;
+    height: auto;
+    width: 65%;
+    margin-top: 100px;
+    margin-left: auto;
+  }
+  #HeroImgDiv {
+    width: 400px;
+  }
+  #Stack {
+    font-size: 25px;
+  }
+}
+
+@media (max-width:768px) {
+#Navbar {
+  width: 100vw;
+}
+  #HeroTextDiv {
+    width: 75%;
+    font-size: 32px;
+  }
+
+  #HeroImgDiv {
+    display: none;
+  }
+}
+
+@media (max-width:430px) {
+
+
+  #Hero {
+    margin-left: 0;
+    align-items: start;
+  }
+  .animated-btn{
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  #HeroTextDiv {
+  
+        margin-top: 40px;
+        margin-right: 18px;
+        width: auto;
+        font-size: 26px;
+        padding-left: 30px;
+        animation: none;
+  }
+}
