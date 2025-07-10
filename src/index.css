@@ -64,8 +64,6 @@ body {
 }
 #HeroImgDiv img{
   -webkit-filter: drop-shadow(rgb(191, 197, 212) 3px 3px 4px);
-  animation: ImgScrollAnimate linear;
-  animation-timeline: scroll();
 }
 /* Styling the Stack & Exp Section */
 
@@ -123,16 +121,7 @@ body {
 
 }
 /* Making Custom Animations */
-@keyframes ImgScrollAnimate {
-  from{
-     
-     filter: grayscale(0);
-  }
-  to {
-     
-     filter: grayscale(1);
-  }
-}
+
 @keyframes TxtScrollAnimate {
   to {
     scale: 0.6;
@@ -281,11 +270,9 @@ body {
 
   #HeroTextDiv {
   
-        margin-top: 40px;
         margin-right: 18px;
         width: auto;
         font-size: 26px;
-        padding-left: 30px;
         animation: none;
   }
 }

@@ -31,17 +31,17 @@ const Navbar = () => {
           </div>
         </div>
         <div >
-          <ul className='flex flex-col h-[430px] gap-12 text-xl' >
-            <li onClick={()=>handleScroll('Hero')} className='NavBtn'>Home</li>
-            <li onClick={()=>handleScroll('Stack')} className='NavBtn'>Skills & Experience</li>
-            <li onClick={()=>handleScroll('Projects')} className='NavBtn'>Projects</li>
-            <li onClick={()=>handleScroll('Contact')} className='NavBtn'>Contact</li>
+          <ul className='flex flex-col font-sans h-[430px] gap-12 text-xl' >
+            <li onClick={()=>{handleScroll('Hero');toggleNavbar()}} className='NavBtn'>Home</li>
+            <li onClick={()=>{handleScroll('Stack');toggleNavbar()}} className='NavBtn'>Skills & Experience</li>
+            <li onClick={()=>{handleScroll('Projects');toggleNavbar()}} className='NavBtn'>Projects</li>
+            <li onClick={()=>{handleScroll('Contact');toggleNavbar()}} className='NavBtn'>Contact</li>
           </ul>
         </div>
         <div className=' text-white text-xl mb-3 flex gap-3 cursor-pointer justify-center w-full h-5 '>
-          <span><i id='fb' className="fa-brands fa-facebook"></i></span>
-          <span><i id='in' className="fa-brands fa-instagram"></i></span>
-          <span><i id='li' className="fa-brands fa-linkedin"></i></span>
+          <a href="https://web.facebook.com/profile.php?id=100014765442893"><span><i id='fb' className="fa-brands fa-facebook"></i></span></a>
+          <a href="https://www.instagram.com/sohaib_zaman1/"><span><i id='in' className="fa-brands fa-instagram"></i></span></a>
+          <a href="https://www.linkedin.com/in/sohaib-baloch-7672ab325/"><span><i id='li' className="fa-brands fa-linkedin"></i></span></a>
         </div>
       </nav>
     </>
